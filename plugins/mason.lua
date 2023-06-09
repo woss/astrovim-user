@@ -5,9 +5,9 @@ return {
     "williamboman/mason-lspconfig.nvim",
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
-      ensure_installed = { 
-        "lua_ls", 
-        "denols",
+      ensure_installed = {
+        "lua_ls",
+        -- "denols",
         "dockerls",
         "docker_compose_language_service",
         "eslint",
@@ -17,12 +17,14 @@ return {
         "jsonls",
         "tsserver",
         "marksman",
-        "nil_ls",
+        "rnix",
         "rust_analyzer",
         "taplo",
         "tailwindcss",
         "terraformls",
-    },
+        "svelte",
+        "nil_ls",
+      },
     },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
@@ -30,14 +32,24 @@ return {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
-      ensure_installed = { "prettier","prettierd", "stylua", "markdownlint", "eslint_d", "jsonlint","yamllint","rstcheck","fixjson" },
+      ensure_installed = {
+        "prettier",
+        "prettierd",
+        "stylua",
+        "markdownlint",
+        "eslint_d",
+        "jsonlint",
+        "yamllint",
+        "rstcheck",
+        "fixjson",
+      },
     },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      ensure_installed = { "python","js-debug-adapter","node-debug2-adapter","firefox-debug-adapter" },
+      ensure_installed = { "python", "js-debug-adapter", "node-debug2-adapter", "firefox-debug-adapter" },
     },
   },
 }
